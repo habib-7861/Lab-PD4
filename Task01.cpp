@@ -1,19 +1,15 @@
 #include <iostream>
-#include <windows.h>
 using namespace std;
-void gotoxy(int x, int y);
+int x = 10;
+void myfunction()
+{
+    cout <<"The value of the x is: "<<x<<endl;
+    int x = 20;
+}
 main()
 {
-  system ("cls");
-  cout <<"Test";
-  gotoxy(15,15);
-  cout <<"My name is HABIB UL REHMAN";
-}
-
-void gotoxy(int x, int y)
-{
-  COORD coordinates;
-  coordinates.X = x;
-  coordinates.Y = y;
-  SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE),coordinates);
+    myfunction();
+    int x = 30;
+    cout <<"The value of x is: "<<x<<endl;
+    myfunction();
 }
