@@ -1,34 +1,26 @@
 #include <iostream>
 using namespace std;
-void add(int num1, int num2);
-void mult(int num3, int num4);
+int isGreater(int num1,int num2);
 main()
 {
-  int num1;
-  int num2;
-  int num3;
-  int num4;
-  cout <<"number1 : ";  
+  int num1,num2,result;
+  cout <<"Enter num1: ";
   cin >>num1;
-  cout <<"number2 : ";
+  cout <<"Enter num2: ";
   cin >>num2;
-  add(num1 , num2);
-  cout <<"number3 : ";  
-  cin >>num3;
-  cout <<"number4 : ";
-  cin >>num4;
-  mult(num3 , num4);
-}
-void add(int num1, int num2)
-{
-  int sum;
-  sum = num1 + num2;
-  cout <<"sum: "<<sum<<endl;
+  result = isGreater(num1,num2);
+  cout <<result<<" is greater number";
 }
 
-void mult(int num3, int num4)
+int isGreater(int num1,int num2)
 {
-  int mul;
-  mul = num3 * num4;
-  cout <<"multiply: "<<mul;
+  if(num1 > num2)
+  {
+    return num1;
+  }
+  if(num2 < num1)
+  {
+    return num2;
+  }
+  return 0; 
 }
