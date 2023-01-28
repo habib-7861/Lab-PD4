@@ -1,37 +1,32 @@
 #include <iostream>
 using namespace std;
-int discount(string day,string month,float price)
-{
-    float discounts;
-    if(day == "Sunday" && (month == "October"|| month =="march" || month == "August"))
-    {
-        float disc = price - (price*10/100);
-        discounts = disc;
-    }
-    else 
-    {
-        discounts = price;
-    }
-    return discounts;
-
-
-
-}
+bool isGreater(int,int);
 main()
 {
-    system("cls");
-    while(true)
-    {
-        string day,month;
-        int price;
-        float payable;
-        cout <<"Enter day: ";
-        cin>>day;
-        cout <<"Enter month: ";
-        cin>>month;
-        cout <<"Enter price: ";
-        cin>>price;
-        float result = discount(day,month,price);
-        cout <<result<<endl;
-    }
+  system("cls");
+  int num1,num2,num3;
+  bool isTrue;
+  cout <<"Enter number1: ";
+  cin >>num1;
+  cout <<"Enter number2: ";
+  cin >>num2;
+  cout <<"Enter number3: ";
+  cin >>num3;
+  isTrue = isGreater(num1,num2);
+  if(isTrue == true)
+  {
+    cout <<"A is symmetric"<<isTrue;
+  }
+  if(isTrue == false)
+  {
+    cout <<"A is not symmetric"<<isTrue;
+  }
+}
+
+bool isGreater(int num1,int num2)
+{
+  if(num1 == num3)
+  {
+    return true;
+  }
 }

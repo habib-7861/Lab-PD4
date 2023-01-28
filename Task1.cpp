@@ -1,45 +1,30 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
-int Grade(int marks);
+float calculate(float base,float degree);
 main()
 {
-    system("cls");
-    int marks;
-    while(true)
-    {
-        cout <<"Enter marks: ";
-        cin>>marks;
-        char result = Grade(marks);
-        cout <<result<<endl; 
-    }
-}
-int Grade(int marks)
-{
-    char grades;
-    if(marks < 50)
-    {
-        grades = 'F'; 
-    }
-   else if(marks >= 50 && marks <= 60 )
-    {
-        grades = 'E'; 
-    }
-   else if(marks > 60 && marks <= 70 )
-    {
-        grades = 'D'; 
-    }
-   else if(marks > 70 && marks <= 80 )
-    {
-        grades = 'C'; 
-    }
-   else if(marks > 80 && marks <= 85 )
-    {
-        grades = 'B'; 
-    }
-    else if(marks > 85 && marks <=100)
-    {
-        grades = 'A'; 
-    }
-    return grades;
+  system("cls");
+  float base;
+  float degree;
+  cout <<"Enter base: ";
+  cin >>base;
+  cout <<"Enter degree: ";
+  cin >>degree;
+  float heigt;
+  heigt = calculate(base,degree);
+  cout <<"The Height is: "<<heigt; 
 
+}
+float calculate(float base,float degree)
+{
+  float radian;
+  float radians;
+  float angle;
+  float height;
+  radian = 57.2958;
+  radians = degree/radian;
+  angle = tan(radians);
+  height = angle*base;
+  return height;
 }
