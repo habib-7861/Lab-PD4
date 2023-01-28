@@ -1,18 +1,22 @@
 #include <iostream>
 using namespace std;
-int value1 = 10;
-int value2 = 20;
-int sum()
-{
-    value1 = 40;
-    return value1 + value2;
-}
+int mult(int num,int number);
 main()
 {
-    int x = value1;
-    cout <<x<<" ";
-    value1 = 100;
-    x = 20;
-    value2 = sum();
-    cout <<value1<<" "<<value2;
+    system("cls");
+    int num;
+    int multiplication;
+    int number = 5;
+    cout <<"Enter number:";
+    cin>>num;
+    multiplication = mult(num,number);
+    cout <<"The Result is: "<<multiplication;
+
+}
+int mult(int num,int number)
+{
+    int result;
+    
+    result = num*number;
+    return result;
 }
