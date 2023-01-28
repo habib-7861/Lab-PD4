@@ -3,17 +3,12 @@ using namespace std;
 int discount(string day,string month,float price)
 {
     float discounts;
-    if(day == "Sunday" && month == "October")
+    if(day == "Sunday" || month == "October")
     {
         float disc = price - (price*10/100);
         discounts = disc;
     }
-    else if(day == "Sunday" && month != "October")
-    {
-        float disc = price - (price*5/100);
-        discounts = disc;
-    }
-    else if(day != "Sunday" && month == "October")
+    else 
     {
         discounts = price;
     }
@@ -35,6 +30,6 @@ main()
         cout <<"Enter price: ";
         cin>>price;
         float result = discount(day,month,price);
-        cout <<result<<endl;
+        cout <<"Payable amount is: "<<result<<endl;
     }
 }

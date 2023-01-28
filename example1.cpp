@@ -1,26 +1,22 @@
 #include <iostream>
 using namespace std;
-int isGreater(int num1,int num2);
 main()
 {
-  int num1,num2,result;
-  cout <<"Enter num1: ";
-  cin >>num1;
-  cout <<"Enter num2: ";
-  cin >>num2;
-  result = isGreater(num1,num2);
-  cout <<result<<" is greater number";
-}
-
-int isGreater(int num1,int num2)
-{
-  if(num1 > num2)
-  {
-    return num1;
-  }
-  if(num2 < num1)
-  {
-    return num2;
-  }
-  return 0; 
+    string brand;
+    int price;
+    while(true)
+    {
+        cout <<"Enter brand: ";
+        cin>>brand;
+        cout <<"Enter price: ";
+        cin>>price;
+        if(brand == "MTJ" && price < 1500 )
+        {
+            cout <<"I will buy."<<endl;
+        }
+        else
+        {
+            cout <<"I will not buy."<<endl;
+        }
+    }
 }

@@ -1,54 +1,30 @@
 #include <iostream>
-#include <windows.h>
 using namespace std;
-void ticket();
-
+string congrates(string name, int Reg_no);
 main()
 {
-  ticket();
-}
-void ticket()
-{ 
-  string country;
-  int price;
-  int discount;
-  int payable;
+    system("cls");
+    string name;int Reg_no;string result;
     while(true)
-  {
-    cout <<"Enter country name: ";
-    cin >>country;
-    cout << "Enter price: ";
-    cin >>price;
-    if(country == "Pakistan")
     {
-    discount = price*0.05;
-    payable = price - discount;
-    cout <<"payable amount is: "<<payable<<endl;
-    }  
-    if(country == "Ireland")
-    {
-    discount = price*0.10;
-    payable = price - discount;
-    cout <<"payable amount is: "<<payable<<endl;
-    } 
-    if(country == "India")
-    {
-    discount = price*0.20;
-    payable = price - discount;
-    cout <<"payable amount is: "<<payable<<endl;
+        cout <<"Enter name: ";
+        cin >>name;
+        cout <<"Enter Registration number: ";
+        cin >>Reg_no;
+        result = congrates(name,Reg_no);
+        cout <<result<<endl;
     }
-    if(country == "England")
-    {
-    discount = price*0.30;
-    payable = price - discount;
-    cout <<"payable amount is: "<<payable<<endl; 
-    }
-    if(country == "Canada")
-    {
-    discount = price*0.45;
-    payable = price - discount;
-    cout <<"payable amount is: "<<payable<<endl; 
-    }
-  }
 }
-
+string congrates(string name, int Reg_no)
+{
+    string cong;
+    if(name == "Ali" && Reg_no == 501)
+    {
+    cong = "congratulations Ali!";
+    }
+    else 
+    {
+        cong = "incorrect information.";
+    }
+    return cong;
+}

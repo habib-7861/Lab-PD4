@@ -1,24 +1,29 @@
 #include <iostream>
-#include <windows.h>
 using namespace std;
-void speed();
+string Brand(string brand,int price);
 main()
 {
-  system("cls");
-  speed();
+    system("cls");
+    string brand;int price;
+    while(true)
+    {
+        cout <<"Enter brand: ";
+        cin >>brand;
+        cout <<"Enter price: ";
+        cin >>price;
+        string result = Brand(brand,price);
+        cout <<result<<endl;
+    }
 }
-void speed()
+string Brand(string brand,int price)
 {
- int speed_limit;
- cout <<"Enter speed limit in km/h: "; 
- cin >>speed_limit;
-   if(speed_limit <= 100)
-   {
-     cout <<"You are going good.";
-   }
-   if(speed_limit > 100)
-   {
-   cout <<"Stop! you are challanged.";
-   }
-  
+    string buy;
+    if(price <1500)
+    {
+        if(brand == "MTJ")
+        {
+            buy = "you can buy that brand.";
+        }
+    }
+    return buy;
 }
