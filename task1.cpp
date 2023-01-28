@@ -1,19 +1,22 @@
 #include <iostream>
 using namespace std;
-void table(int number);
+void print(int row);
 main()
 {
     system("cls");
-    int number;
-    while(true)
-    {
-        cout <<"Enter number: ";
-        cin >>number;
-        table(number); 
-    }
+    int row;
+    cout <<"Enter rows: ";
+    cin >>row;
+    print(row);
 }
-void table(int number)
+void print(int row)
 {
-    for(int count = 1; count <=10;count = count + 1)
-    cout <<number<<" * "<<count<<" = "<< number*count<<endl;
+        for(int a = 1;a <=row;a = a+1)
+        {
+            for(int b = 1; b <= a; b = b+1)
+            {
+                cout <<"*";
+            }
+            cout <<endl;
+    }
 }

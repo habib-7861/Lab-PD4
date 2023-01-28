@@ -12,10 +12,14 @@ main()
 }
 int number(int num)
 {        
-    int sum = 0;
-    for(int d = 1;d<=num;d=d+1)
+    int a = 1;
+    int b = 2;
+    int c;
+    for(int d = 1;d<num;d=d+1)
     {
-        sum = sum + d;
+        c = a+b;
+        a = c;
+        b = b+1;
     }
-    return sum;
+    return c;
 }

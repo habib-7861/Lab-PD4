@@ -1,28 +1,29 @@
 #include <iostream>
 using namespace std;
-int frequencyChecker(int number,int digit);
+void print(int number);
 main()
 {
     int number;
-    int digit;
     cout <<"Enter number: ";
     cin >>number;
-    cout <<"Enter digit: ";
-    cin >>digit;
-    int result = frequencyChecker(number,digit);
-    cout <<result;
+    print(number);
 }
-int frequencyChecker(int number,int digit)
+void print(int number)
 {
-    int count = 0;
-    while(number > 0)
+    int c;
+    for(int a = 1;a<=number;a=a+1)
     {
-        int a = number%10;
-        number = number/10;
-        if( a==digit)
+
+        int b = number%4;
+        if(b != 0)
         {
-            count = count + 1;
+           cout <<a<<endl;
         }
+        else
+        {
+            c = number*10;
+            a = c;
+        }
+        cout <<c<<endl;
     }
-    return count;
 }

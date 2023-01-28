@@ -1,25 +1,22 @@
 #include <iostream>
 using namespace std;
-void printFibonacci(int number);
+void print(int row);
 main()
 {
     system("cls");
-    int number;
-    cout <<"Enter number: ";
-    cin>>number;
-    printFibonacci(number);
+    int row;
+    cout <<"Enter number of rows: ";
+    cin >>row;
+    print(row);
 }
-void printFibonacci(int number)
+void print(int row)
 {
-    int num1 = 0;
-    int num2 = 1;
-    int x;
-    cout <<num1<<" , "<<num2;
-    for(int count = 1;count <= number - 2;count = count+1)
+    for( int a = row;a>=1;a=a-1)
     {
-        x = num1+num2;
-        cout<<" , " <<x;
-        num1 = num2;
-        num2 = x;
+        for(int b = 1;b<=a;b=b+1)
+        {
+            cout <<"*";
+        }
+        cout <<endl;
     }
 }
