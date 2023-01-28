@@ -1,22 +1,25 @@
 #include <iostream>
 using namespace std;
-void isEligible(int age);
+void printFibonacci(int number);
 main()
 {
-  int age;
-  cout <<"Enter age: ";
-  cin >>age;
-  isEligible(age);
+    system("cls");
+    int number;
+    cout <<"Enter number: ";
+    cin>>number;
+    printFibonacci(number);
 }
-
-void isEligible(int age)
-{	
-  if(age >= 18)
-  {
-    cout <<"Eligible";
-  }
-  if(age < 18)
-  {
-    cout <<"Not Eligible";
-  }
+void printFibonacci(int number)
+{
+    int num1 = 0;
+    int num2 = 1;
+    int x;
+    cout <<num1<<" , "<<num2;
+    for(int count = 1;count <= number - 2;count = count+1)
+    {
+        x = num1+num2;
+        cout<<" , " <<x;
+        num1 = num2;
+        num2 = x;
+    }
 }

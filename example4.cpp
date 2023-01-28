@@ -1,12 +1,9 @@
 #include <iostream>
 using namespace std;
-main ()
+main()
 {
-  string name;
-  cout <<"Enter name: ";
-  cin >>name;
-  if( name == "Ali")
-  {
-     cout <<"Welcome Ali";
-  }
+    for (int count = 2;count <=100;count = count+2)
+    {
+        cout <<count<<endl;
+    }
 }

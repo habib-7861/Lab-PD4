@@ -1,12 +1,11 @@
 #include <iostream>
 using namespace std;
-main ()
+main()
 {
-  string name;
-  cout <<"Enter name: ";
-  cin >>name;
-  if( name == "Ali")
-  {
-     cout <<"Welcome Ali";
-  }
+    int sum = 0;
+    for (int count = 1;count <=5;count = count+1)
+    {
+        sum = sum + count;
+    }
+    cout <<sum<<endl;
 }

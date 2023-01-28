@@ -1,23 +1,22 @@
 #include <iostream>
 using namespace std;
-void isEven(int num);
+int digits(int number);
 main()
 {
-  while(true)
-  {int num;
-  cout <<"Enter nuber: ";
-  cin>>num;
-  isEven(num);
-  }
+    system("cls");
+    int number;
+    cout <<"Enter number: ";
+    cin >>number;
+    int result = digits(number);
+    cout <<result;
 }
-void isEven(int num)
+int digits(int number)
 {
-  if(num%2==0)
-  {
-    cout <<"Even"<<endl;
-  }
-  if(num%2!=0)
-  {
-    cout <<"odd"<<endl;
-  }
+    int count = 0;
+    while(number > 0)
+    {
+        count = count + 1;
+        number = number / 10;
+    }
+    return count;
 }

@@ -2,21 +2,13 @@
 using namespace std;
 main()
 {
-    string brand;
-    int price;
-    while(true)
+    int number;
+    cout <<"Enter lucky number: ";
+    cin >>number;
+    while(number != 10)
     {
-        cout <<"Enter brand: ";
-        cin>>brand;
-        cout <<"Enter price: ";
-        cin>>price;
-        if(brand == "MTJ" && price < 1500 )
-        {
-            cout <<"I will buy."<<endl;
-        }
-        else
-        {
-            cout <<"I will not buy."<<endl;
-        }
+        cout <<"Not my lucky number! try Again"<<endl;
+        cout <<"Try again: "<<endl;
+        cin >>number;
     }
 }

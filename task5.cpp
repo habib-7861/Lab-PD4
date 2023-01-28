@@ -3,18 +3,21 @@ using namespace std;
 int sum(int number);
 main()
 {
+    system("cls");
     int number;
     cout <<"Enter number: ";
-    cin >>number;
+    cin>>number;
     int result = sum(number);
     cout <<result;
 }
 int sum(int number)
 {
-    int sum = 0;
-    for(int count = 1;count <=number;count = count + 1)
+    int sum1 = 0;
+    while(number > 0)
     {
-        sum = sum + count;
+        int a = number%10;
+        number = number/10;
+        sum1 = sum1 + a;
     }
-    return sum;
+    return sum1;
 }

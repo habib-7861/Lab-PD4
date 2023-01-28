@@ -1,21 +1,28 @@
 #include <iostream>
 using namespace std;
-void calculateBilal(string day , int amount);
+int frequencyChecker(int number,int digit);
 main()
 {
-  string day;
-  int amount;
-  cout <<"Enter days: ";
-  cin>>day;
-  cout <<"Enter amounts: ";
-  cin>>amount;
+    int number;
+    int digit;
+    cout <<"Enter number: ";
+    cin >>number;
+    cout <<"Enter digit: ";
+    cin >>digit;
+    int result = frequencyChecker(number,digit);
+    cout <<result;
 }
- void calculateBilal(string day , int amount)
+int frequencyChecker(int number,int digit)
 {
-  if(day == "sunday")
-  {
-  int discount = amount*0.9;
-  cout <<"The payable amount is: "<<discount;
-  } 
-  cout << "complete"; 
+    int count = 0;
+    while(number > 0)
+    {
+        int a = number%10;
+        number = number/10;
+        if( a==digit)
+        {
+            count = count + 1;
+        }
+    }
+    return count;
 }
