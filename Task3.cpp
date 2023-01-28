@@ -1,32 +1,28 @@
 #include <iostream>
 using namespace std;
-bool isGreater(int,int);
+float taxCalculator(float tax_rate, float price);
 main()
-{
-  system("cls");
-  int num1,num2,num3;
-  bool isTrue;
-  cout <<"Enter number1: ";
-  cin >>num1;
-  cout <<"Enter number2: ";
-  cin >>num2;
-  cout <<"Enter number3: ";
-  cin >>num3;
-  isTrue = isGreater(num1,num2);
-  if(isTrue == true)
-  {
-    cout <<"A is symmetric"<<isTrue;
-  }
-  if(isTrue == false)
-  {
-    cout <<"A is not symmetric"<<isTrue;
-  }
+{ 
+    system("cls");
+    string vehicle;char code;
+    float price,tax_rate;
+    while(true)
+    {
+    cout <<"Enter vehicle type: ";
+    cin>>vehicle;
+    cout <<"Enter vehicle code: ";
+    cin>>code;
+    cout <<"Enter price of vehicle: ";
+    cin>>price;
+    cout <<"Enter tax rate: ";
+    cin >>tax_rate;
+    float result = taxCalculator(tax_rate,price);
+    cout <<"The final price on a vehicle of type "<<" "<<vehicle<<" after adding the text is "<<"  $"<<result<<" "<<"with "<<vehicle<<"  "<< "replaced by the vehicle type and $"<<result<<" "<<"with the final price"<<endl;
+    }
 }
-
-bool isGreater(int num1,int num2)
+float taxCalculator(float tax_rate, float price)
 {
-  if(num1 == num3)
-  {
-    return true;
-  }
+    float tax_amount = price*tax_rate/100;
+    float final_price = price + tax_amount;
+    return final_price;
 }
